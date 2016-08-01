@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Homework 1-2</title>
+  <script>
+
+   function checkNum(n) {
+        while (!isNumeric(n)||!n)  {
+          alert ('это не число, попробуйте еще раз');
+          n = +(prompt("Введите число"));
+        }
+      return(n)
+    }
+   
+    function isNumeric(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    function pow(x, n) {
+
+      if (n == 0) {
+      if (x == 0) {
+        return '0 в 0 степени - неопределен';
+      }
+      return 1;
+    }
+
+    if (Math.round(n) != n) return 'возведение в дробную степень не поддержуется';
+
+    var result = 1;
+    for (var i = 0; i < Math.abs(n); i++) {
+      result *= x;
+    }
+    if (n < 0) return 1/result;
+    return result;
+  }
+
+   var a = +prompt("Введите число", "");
+   a = checkNum(a);
+
+   var b = +prompt("Введите степень в которую необходимо возвести "+ a, "");
+   b = checkNum(b);
+  
+  console.log(a + ' в ' + b + '-ой степени  = ' + pow(a,b));
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
