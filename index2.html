@@ -4,31 +4,27 @@
   <meta charset="UTF-8">
   <title>JS Homework 1-2</title>
   <script>
-
-  function compare (arr, name) {
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] === name) {
-        return  alert(name + ' - Вы успешно вошли!');
+    function compare(arr, name) {
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === name) {
+          return alert(name + ' - Вы успешно вошли!');
+        }
       }
+      return alert("Ошибка, пользователь " + name + " не зарегистрирован!")
     }
-    return alert("Ошибка, пользователь " + name + " не зарегистрирован!")
-  };
 
+    var arrNames = [];
 
-var arrNames = []
+    for (var i = 0; i < 5; i++) {
+      var str = prompt("Введите имя", "Антон");
+      arrNames[i] = str;
+    }
 
-for( var i = 0; i < 5; i++){
- var a = prompt("Введите имя", "Антон");
- arrNames[i] = a
-}
-
-console.log(arrNames);
-var name = prompt("Введите имя для входа", "Антон");
-compare(arrNames, name);
-
-</script>
+    console.log(arrNames);
+    var userName = prompt("Введите имя для входа", "Антон");
+    compare(arrNames, userName);
+  </script>
 </head>
 <body>
-
 </body>
 </html>
