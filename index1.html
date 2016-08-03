@@ -5,9 +5,9 @@
   <title>JS Homework 1-2</title>
   <script>
     function checkNum(n) {
-      while (!isNumeric(n) || !n) {
+      while (!isNumeric(n)) {
         alert('это не число, попробуйте еще раз');
-        n = +(prompt("Введите число"));
+        n = prompt("Введите число");
       }
       return (n)
     }
@@ -34,10 +34,10 @@
       return result;
     }
 
-    var a = +prompt("Введите число", "");
+    var a = prompt("Введите число", "");
     a = checkNum(a);
 
-    var b = +prompt("Введите степень в которую необходимо возвести " + a, "");
+    var b = prompt("Введите степень в которую необходимо возвести " + a, "");
     b = checkNum(b);
 
     console.log(a + ' в ' + b + '-ой степени  = ' + pow(a, b));
